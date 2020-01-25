@@ -22,7 +22,7 @@ def searchTrains(board, dest):
   return json
 
 def getCount(imgPath):
-  return random.randint(0,3)
+  return random.randint(0,20)
 
 def checkTrain(metroId):
   trainStatus = {

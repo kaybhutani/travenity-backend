@@ -24,11 +24,12 @@ def getCount(imgPath):
   return random.randint(5,30)
 
 def checkTrain(metroId):
-  json = {
+  trainStatus = {
   "metroId": metroId,
   "density": []
   }
   imgPaths = ['img1.jpg', 'img2.jpg', 'img3.jpg' ,'img4.jpg' ,'img5.jpg' ,'img6.jpg']
   for imgPath in imgPaths:
     count = getCount(imgPath)
-    json["density"].append(count)
+    trainStatus["density"].append(count)
+    return trainStatus

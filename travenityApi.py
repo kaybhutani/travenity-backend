@@ -18,10 +18,11 @@ def searchTrains(board, dest):
     }
   ]
 }
+  print(json)
   return json
 
 def getCount(imgPath):
-  return random.randint(5,30)
+  return random.randint(0,3)
 
 def checkTrain(metroId):
   trainStatus = {
@@ -32,4 +33,5 @@ def checkTrain(metroId):
   for imgPath in imgPaths:
     count = getCount(imgPath)
     trainStatus["density"].append(count)
-    return trainStatus
+  print(trainStatus["density"])
+  return trainStatus

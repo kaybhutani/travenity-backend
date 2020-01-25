@@ -16,6 +16,8 @@ def search():
 
 @app.route('/check', methods=['POST'])
 def check():
+  print(request.form)
+  metroId = request.form.get('metroId')
   result = checkTrain(metroId)
   return result
 

@@ -8,16 +8,14 @@ app=Flask(__name__)
 
 @app.route('/search', methods=['POST'])
 def search():
-  json = request.get_json()
-  destination = json["dest"]
-  boarding = json["board"]
-  result = searchTrains(boarding, destination)
+  board = request.form.get('board')
+  dest = request.form.get('dest')
+  print(board,dest)
+  result = searchTrains(board, dest)
   return result
 
 @app.route('/check', methods=['POST'])
 def check():
-  json = request.get_json()
-  metroId = json["metroId"]
   result = checkTrain(metroId)
   return result
 
